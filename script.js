@@ -60,3 +60,16 @@ function solveOnClick() {
         console.log("Value below 0");
     }
 }
+
+// Reload Button to DOM
+const reloadPage = document.createElement("button");
+reloadPage.innerText = "Reload";
+reloadPage.id = "reloadButton";
+main.append(reloadPage);
+
+document
+    .querySelector("#reloadButton")
+    .addEventListener("click", reloadOnClick);
+function reloadOnClick() {
+    location.reload();
+}
